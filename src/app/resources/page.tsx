@@ -33,6 +33,7 @@ function ResourceCard({ resource, index }: { resource: Resource; index: number }
   );
 }
 
+
 export default function ResourcesPage() {
   const categories = ["Guides", "Forms", "Study Guides"];
   const hasResources = MOCK_RESOURCES.length > 0;
@@ -86,3 +87,5 @@ export default function ResourcesPage() {
     </div>
   );
 }
+
+

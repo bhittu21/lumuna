@@ -6,6 +6,7 @@ import { ArrowLeft, Calendar, MapPin, Users, Award, BookOpen } from "lucide-reac
 import Link from "next/link";
 import { MOCK_EVENTS } from "@/data/mock";
 
+
 export default function EventDetailPage() {
   const params = useParams();
   const slug = params?.slug as string;
@@ -191,3 +192,4 @@ export default function EventDetailPage() {
     </div>
   );
 }
+

@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { MOCK_MILESTONES } from "@/data/mock";
 
+
 export default function AboutPage() {
   return (
     <div className="flex flex-col w-full bg-white">
@@ -199,3 +200,4 @@ export default function AboutPage() {
     </div>
   );
 }
+

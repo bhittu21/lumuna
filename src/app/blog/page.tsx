@@ -107,6 +107,7 @@ function ArticleCard({ post, index }: { post: BlogPost; index: number }) {
   );
 }
 
+
 export default function BlogPage() {
   const featured = MOCK_BLOGS[0];
   const posts = MOCK_BLOGS.slice(1);
@@ -156,3 +157,5 @@ export default function BlogPage() {
     </div>
   );
 }
+
+

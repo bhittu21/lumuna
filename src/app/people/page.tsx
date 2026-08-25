@@ -78,6 +78,7 @@ function StandardMemberCard({ member, index }: { member: Member; index: number }
   );
 }
 
+
 export default function PeoplePage() {
   const groupedMembers = CATEGORY_ORDER.reduce((acc, category) => {
     acc[category] = MOCK_MEMBERS.filter(m => m.category === category).sort((a, b) => a.order - b.order);
@@ -161,3 +162,5 @@ export default function PeoplePage() {
     </div>
   );
 }
+
+

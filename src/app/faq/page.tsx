@@ -30,6 +30,7 @@ function FAQItem({ faq }: { faq: FAQ }) {
   );
 }
 
+
 export default function FAQPage() {
   const categories = ["MUN", "Membership", "Events", "Registration", "General"];
   
@@ -77,3 +78,5 @@ export default function FAQPage() {
     </div>
   );
 }
+
+

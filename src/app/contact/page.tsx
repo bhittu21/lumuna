@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
 import { CONTACT_INFO } from "@/data/mock";
 
+
 export default function ContactPage() {
   return (
     <div className="w-full bg-white pt-32 pb-24">
@@ -99,3 +100,5 @@ export default function ContactPage() {
     </div>
   );
 }
+
+

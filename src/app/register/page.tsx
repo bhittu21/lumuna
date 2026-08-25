@@ -5,6 +5,7 @@ import { ExternalLink, CheckCircle2 } from "lucide-react";
 import { REGISTRATION_CONFIG } from "@/data/mock";
 import { cn } from "@/lib/utils";
 
+
 export default function RegisterPage() {
   const { delegate, hod } = REGISTRATION_CONFIG;
 
@@ -126,3 +127,5 @@ export default function RegisterPage() {
     </div>
   );
 }
+
+

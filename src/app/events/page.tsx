@@ -58,6 +58,7 @@ function EventCard({ event, index }: { event: Event; index: number }) {
   );
 }
 
+
 export default function EventsPage() {
   const [activeFilter, setActiveFilter] = useState("All");
 
@@ -149,3 +150,5 @@ export default function EventsPage() {
     </div>
   );
 }
+
+
