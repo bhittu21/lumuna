@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full">
       {/* 1. HERO */}
-      <section className="relative min-h-[95vh] flex items-center justify-center px-6 pt-20 overflow-hidden bg-white">
+      <section className="relative min-h-[85vh] flex items-center justify-center px-6 pt-12 pb-16 overflow-hidden bg-white">
         <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,_var(--color-primary)_0%,_transparent_25%)] opacity-5" />
         
         <div className="max-w-6xl w-full mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -72,17 +72,14 @@ export default function Home() {
             </motion.div>
           </div>
 
-          <div className="lg:col-span-5 relative hidden lg:block h-[600px] w-full">
+          <div className="lg:col-span-5 relative hidden lg:block h-[550px] w-full">
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.2 }}
               className="absolute inset-0 bg-gray-100 rounded-3xl overflow-hidden"
             >
-              {/* Placeholder for high-quality LUMUNA imagery */}
-              <div className="w-full h-full bg-gradient-to-tr from-gray-200 to-gray-50 flex items-center justify-center">
-                <span className="text-muted text-sm font-medium tracking-widest uppercase">LUMUNA Archive</span>
-              </div>
+              <img src="https://images.unsplash.com/photo-1577563908411-5077b6dc7624?q=80&w=1470&auto=format&fit=crop" alt="LUMUNA Conference" className="w-full h-full object-cover" />
             </motion.div>
             {/* Floating Metadata */}
             <motion.div 
@@ -124,7 +121,7 @@ export default function Home() {
       </section>
 
       {/* 3. ABOUT PREVIEW */}
-      <section className="py-32 px-6 bg-white">
+      <section className="py-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -150,33 +147,44 @@ export default function Home() {
 
       {/* 4. FEATURED EVENT */}
       {featuredEvent && (
-        <section className="py-24 px-6 bg-foreground text-white">
+        <section className="py-20 px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col md:flex-row gap-16 items-center">
+            <div className="flex flex-col lg:flex-row gap-16 items-center">
+              
               <motion.div 
-                className="w-full md:w-1/2"
                 initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+                className="w-full lg:w-1/2 aspect-[4/3] rounded-3xl overflow-hidden bg-gray-100 relative group"
+              >
+                <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1470&auto=format&fit=crop" alt="Featured Event" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              </motion.div>
+              
+              <motion.div 
+                className="w-full lg:w-1/2"
+                initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="inline-block px-3 py-1 bg-white/10 rounded-full text-xs font-semibold tracking-widest uppercase mb-6 border border-white/20">
+                <div className="inline-block px-3 py-1 bg-gray-100 rounded-full text-xs font-semibold tracking-widest uppercase mb-6 text-foreground">
                   {featuredEvent.status === "Upcoming" ? "Featured Upcoming Event" : "Most Recent Event"}
                 </div>
                 <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 leading-tight">{featuredEvent.name}</h2>
                 {featuredEvent.theme && (
-                  <p className="text-xl font-medium text-gray-300 italic mb-6">"{featuredEvent.theme}"</p>
+                  <p className="text-xl font-medium text-muted italic mb-6">"{featuredEvent.theme}"</p>
                 )}
-                <p className="text-gray-400 text-lg leading-relaxed mb-8">
+                <p className="text-muted text-lg leading-relaxed mb-8">
                   {featuredEvent.description}
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-6 mb-10">
-                  <div className="flex items-center gap-3 text-sm text-gray-300">
+                  <div className="flex items-center gap-3 text-sm text-foreground">
                     <Calendar className="w-5 h-5 text-primary" />
                     {featuredEvent.displayDate}
                   </div>
-                  <div className="flex items-center gap-3 text-sm text-gray-300">
+                  <div className="flex items-center gap-3 text-sm text-foreground">
                     <MapPin className="w-5 h-5 text-primary" />
                     {featuredEvent.location}
                   </div>
@@ -188,32 +196,20 @@ export default function Home() {
                       Registration Open
                     </Link>
                   ) : (
-                    <Link href={`/events/${featuredEvent.slug}`} className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-full font-semibold transition-colors">
+                    <Link href={`/events/${featuredEvent.slug}`} className="px-8 py-4 bg-gray-100 hover:bg-gray-200 text-foreground rounded-full font-semibold transition-colors">
                       View Conference Details
                     </Link>
                   )}
                 </div>
               </motion.div>
               
-              <motion.div 
-                className="w-full md:w-1/2 aspect-square md:aspect-[4/5] bg-white/5 rounded-3xl overflow-hidden border border-white/10 relative"
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
-                {/* Image Placeholder */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-gray-500 text-sm tracking-widest uppercase">Event Media</span>
-                </div>
-              </motion.div>
             </div>
           </div>
         </section>
       )}
 
       {/* 5. WHY LUMUNA */}
-      <section className="py-32 px-6 bg-gray-50">
+      <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -252,7 +248,7 @@ export default function Home() {
       </section>
 
       {/* 6. PEOPLE PREVIEW */}
-      <section className="py-32 px-6 bg-white border-t border-border">
+      <section className="py-20 px-6 bg-white border-t border-border">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
             <motion.div
@@ -293,7 +289,7 @@ export default function Home() {
       </section>
 
       {/* 7. BLOG PREVIEW */}
-      <section className="py-32 px-6 bg-gray-50 border-t border-border">
+      <section className="py-20 px-6 bg-gray-50 border-t border-border">
         <div className="max-w-6xl mx-auto">
           <div className="flex justify-between items-end mb-16">
             <h2 className="font-heading text-4xl font-bold">Latest from LUMUNA</h2>
@@ -359,3 +355,4 @@ export default function Home() {
     </div>
   );
 }
+

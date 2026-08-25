@@ -44,8 +44,11 @@ export function Navbar() {
           )}
         >
           {/* Logo */}
-          <Link href="/" className="font-heading font-bold text-xl tracking-tight text-foreground hover:text-primary transition-colors">
-            LUMUNA
+          <Link href="/" className="flex items-center gap-2 group">
+            <img src="/logo.png" alt="LUMUNA Logo" className="h-8 w-auto transition-transform group-hover:scale-105" />
+            <span className="font-heading font-bold text-xl tracking-tight text-foreground group-hover:text-primary transition-colors hidden sm:block">
+              LUMUNA
+            </span>
           </Link>
 
           {/* Desktop Nav */}

@@ -10,7 +10,7 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col w-full bg-white">
       {/* 1. INTRODUCTION */}
-      <section className="pt-40 pb-20 px-6 max-w-4xl mx-auto text-center">
+      <section className="pt-32 pb-16 px-6 max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -27,7 +27,7 @@ export default function AboutPage() {
       </section>
 
       {/* 2. OUR STORY */}
-      <section className="py-24 px-6 border-t border-border bg-gray-50/50">
+      <section className="py-16 px-6 border-t border-border bg-gray-50/50">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -51,7 +51,7 @@ export default function AboutPage() {
       </section>
 
       {/* 3. TIMELINE / MILESTONES */}
-      <section className="py-32 px-6">
+      <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -88,7 +88,7 @@ export default function AboutPage() {
       </section>
 
       {/* 4. RECENT HISTORY (Specific events mentioned) */}
-      <section className="py-32 px-6 bg-foreground text-white">
+      <section className="py-20 px-6 bg-foreground text-white">
         <div className="max-w-6xl mx-auto">
           <div className="mb-20 text-center max-w-3xl mx-auto">
             <h2 className="font-heading text-4xl font-bold mb-6">Recent Conference Highlights</h2>
@@ -157,7 +157,7 @@ export default function AboutPage() {
       </section>
 
       {/* 5. OUR PURPOSE & PHILOSOPHY */}
-      <section className="py-32 px-6 bg-white">
+      <section className="py-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -186,7 +186,7 @@ export default function AboutPage() {
       </section>
 
       {/* 6. CTA */}
-      <section className="py-32 px-6 bg-gray-50 border-t border-border text-center">
+      <section className="py-20 px-6 bg-gray-50 border-t border-border text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="font-heading text-4xl font-bold mb-8">Ready to participate?</h2>
           <Link 
@@ -200,4 +200,5 @@ export default function AboutPage() {
     </div>
   );
 }
+
 

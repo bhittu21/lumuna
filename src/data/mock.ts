@@ -45,7 +45,7 @@ export type Event = {
     eb?: number;
   };
   leadership?: EventLeadership[];
-  coverImage?: string;
+  coverImage?: string; photo?: string;
   gallery?: string[];
 };
 
@@ -58,7 +58,7 @@ export type BlogPost = {
   category: string;
   excerpt: string;
   content: string; // Markdown or HTML
-  coverImage?: string;
+  coverImage?: string; photo?: string;
 };
 
 export type RegistrationConfig = {
@@ -98,8 +98,8 @@ export type FAQ = {
 };
 
 export const MOCK_MEMBERS: Member[] = [
-  { id: "m-1", name: "Ashfaque Ahmad Shovon", role: "Advisor", category: "Advisor", session: "2025-2026", order: 1 },
-  { id: "m-2", name: "Md. Jonaid Siddiki Asif", role: "President", category: "President", session: "2025-2026", order: 1 },
+  { id: "m-1", name: "Ashfaque Ahmad Shovon", role: "Advisor", category: "Advisor", session: "2025-2026", order: 1 , photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop" },
+  { id: "m-2", name: "Md. Jonaid Siddiki Asif", role: "President", category: "President", session: "2025-2026", order: 1 , photo: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop" },
   { id: "m-3", name: "Faiyaz Shahdib Sakib", role: "General Secretary", category: "General Secretary", session: "2025-2026", order: 1 },
   { id: "m-vp-1", name: "Najifa Nujhat Chowdhury", role: "Vice President", category: "Vice Presidents", session: "2025-2026", order: 1 },
   { id: "m-vp-2", name: "Sohag Sarker", role: "Vice President", category: "Vice Presidents", session: "2025-2026", order: 2 },
@@ -267,4 +267,5 @@ export const MOCK_MILESTONES: Milestone[] = [
 
 
 export type Milestone = { id: string; year: string; title: string; description: string; };
+
 

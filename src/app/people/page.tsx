@@ -86,7 +86,7 @@ export default function PeoplePage() {
   }, {} as Record<MemberCategory, Member[]>);
 
   return (
-    <div className="w-full bg-white pt-32 pb-24">
+    <div className="w-full bg-white pt-24 pb-16">
       {/* Header */}
       <section className="max-w-6xl mx-auto px-6 mb-24">
         <motion.div
@@ -162,5 +162,6 @@ export default function PeoplePage() {
     </div>
   );
 }
+
 
 

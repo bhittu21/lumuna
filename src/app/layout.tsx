@@ -75,14 +75,14 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
         />
       </head>
-      <body className={`${inter.variable} ${instrument.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${instrument.variable} font-sans antialiased bg-white text-foreground`} suppressHydrationWarning>
         <Navbar />
         <main className="min-h-screen">
           {children}

@@ -69,7 +69,7 @@ export default function EventsPage() {
   const filteredPast = pastEvents.filter(e => activeFilter === "All" || e.type.includes(activeFilter));
 
   return (
-    <div className="w-full bg-white pt-32 pb-24">
+    <div className="w-full bg-white pt-24 pb-16">
       {/* Header */}
       <section className="max-w-5xl mx-auto px-6 mb-16">
         <motion.div
@@ -136,7 +136,7 @@ export default function EventsPage() {
         )}
         
         {filteredUpcoming.length === 0 && filteredPast.length === 0 && (
-          <div className="py-24 text-center">
+          <div className="py-16 text-center">
             <p className="text-muted text-lg">No events found matching "{activeFilter}".</p>
             <button 
               onClick={() => setActiveFilter("All")}
@@ -150,5 +150,6 @@ export default function EventsPage() {
     </div>
   );
 }
+
 
 

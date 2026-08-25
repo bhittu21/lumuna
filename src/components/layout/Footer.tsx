@@ -6,8 +6,11 @@ export function Footer() {
     <footer className="w-full border-t border-border bg-white pt-20 pb-10">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
         <div className="md:col-span-5">
-          <Link href="/" className="font-heading font-bold text-3xl text-foreground mb-4 block">
-            LUMUNA
+          <Link href="/" className="flex items-center gap-3 mb-6 group">
+            <img src="/logo.png" alt="LUMUNA Logo" className="h-12 w-auto transition-transform group-hover:scale-105" />
+            <span className="font-heading font-bold text-3xl text-foreground">
+              LUMUNA
+            </span>
           </Link>
           <p className="text-muted text-base max-w-sm leading-relaxed mb-6">
             The premier youth diplomacy organization of Leading University, Sylhet. Fostering future leaders through debate, negotiation, and international relations.

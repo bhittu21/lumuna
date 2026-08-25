@@ -113,7 +113,7 @@ export default function BlogPage() {
   const posts = MOCK_BLOGS.slice(1);
 
   return (
-    <div className="w-full bg-white pt-32 pb-24">
+    <div className="w-full bg-white pt-24 pb-16">
       {/* Header & Search */}
       <section className="max-w-6xl mx-auto px-6 mb-16 flex flex-col md:flex-row justify-between items-end gap-8">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
@@ -157,5 +157,6 @@ export default function BlogPage() {
     </div>
   );
 }
+
 
 

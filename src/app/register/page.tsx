@@ -71,7 +71,7 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="w-full bg-gray-50/50 min-h-screen pt-32 pb-24">
+    <div className="w-full bg-gray-50/50 min-h-screen pt-24 pb-16">
       <section className="max-w-5xl mx-auto px-6 mb-20 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -127,5 +127,6 @@ export default function RegisterPage() {
     </div>
   );
 }
+
 
 

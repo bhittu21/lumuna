@@ -68,7 +68,7 @@ export default function EventDetailPage() {
       </section>
 
       {/* 2. THEME & OVERVIEW */}
-      <section className="py-24 px-6 border-b border-border">
+      <section className="py-16 px-6 border-b border-border">
         <div className="max-w-4xl mx-auto">
           {event.theme && (
             <motion.div 
@@ -98,7 +98,7 @@ export default function EventDetailPage() {
 
       {/* 3. STATISTICS (Elegant Numerical Blocks) */}
       {event.stats && (
-        <section className="py-24 px-6 bg-gray-50 border-b border-border">
+        <section className="py-16 px-6 bg-gray-50 border-b border-border">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-sm font-bold text-muted tracking-[0.2em] uppercase mb-12 text-center">By the Numbers</h2>
             
@@ -134,7 +134,7 @@ export default function EventDetailPage() {
 
       {/* 4. LEADERSHIP */}
       {event.leadership && event.leadership.length > 0 && (
-        <section className="py-24 px-6 border-b border-border">
+        <section className="py-16 px-6 border-b border-border">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-heading text-3xl font-bold mb-12">Event Leadership</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-16">
@@ -159,7 +159,7 @@ export default function EventDetailPage() {
 
       {/* 5. GALLERY (Masonry) */}
       {event.gallery && event.gallery.length > 0 && (
-        <section className="py-24 px-6">
+        <section className="py-16 px-6">
           <div className="max-w-6xl mx-auto">
             <div className="flex justify-between items-end mb-12">
               <h2 className="font-heading text-3xl font-bold">Event Gallery</h2>
@@ -192,4 +192,5 @@ export default function EventDetailPage() {
     </div>
   );
 }
+
 

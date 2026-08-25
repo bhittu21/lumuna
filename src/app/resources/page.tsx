@@ -39,7 +39,7 @@ export default function ResourcesPage() {
   const hasResources = MOCK_RESOURCES.length > 0;
 
   return (
-    <div className="w-full bg-gray-50/30 min-h-[80vh] pt-32 pb-24">
+    <div className="w-full bg-gray-50/30 min-h-[80vh] pt-24 pb-16">
       <section className="max-w-5xl mx-auto px-6 mb-20 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -75,7 +75,7 @@ export default function ResourcesPage() {
             })}
           </div>
         ) : (
-          <div className="py-32 flex flex-col items-center justify-center text-center border border-dashed border-border rounded-3xl bg-white">
+          <div className="py-20 flex flex-col items-center justify-center text-center border border-dashed border-border rounded-3xl bg-white">
             <BookOpen className="w-12 h-12 text-muted mb-6 opacity-50" />
             <h3 className="font-heading text-2xl font-bold text-foreground mb-3">Check back soon</h3>
             <p className="text-muted max-w-md mx-auto">
@@ -87,5 +87,6 @@ export default function ResourcesPage() {
     </div>
   );
 }
+
 
 

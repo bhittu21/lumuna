@@ -35,7 +35,7 @@ export default function FAQPage() {
   const categories = ["MUN", "Membership", "Events", "Registration", "General"];
   
   return (
-    <div className="w-full bg-white pt-32 pb-24">
+    <div className="w-full bg-white pt-24 pb-16">
       <section className="max-w-3xl mx-auto px-6 mb-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -78,5 +78,6 @@ export default function FAQPage() {
     </div>
   );
 }
+
 
 
