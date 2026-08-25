@@ -174,7 +174,7 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row gap-6 mb-10">
                   <div className="flex items-center gap-3 text-sm text-gray-300">
                     <Calendar className="w-5 h-5 text-primary" />
-                    {featuredEvent.date}
+                    {featuredEvent.displayDate}
                   </div>
                   <div className="flex items-center gap-3 text-sm text-gray-300">
                     <MapPin className="w-5 h-5 text-primary" />
